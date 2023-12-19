@@ -13,10 +13,11 @@ if ($conn->connect_error) {
 // Ambil data yang dikirim dari formulir
 $name = $_POST['name'];
 $email = $_POST['email'];
+$nohp = $_POST['nohp'];
 $password = $_POST['password'];
 
 // Masukkan data ke dalam tabel tb_account
-$sql = "INSERT INTO tb_account (nama_account, email_account, password_account) VALUES ('$name', '$email', '$password')";
+$sql = "INSERT INTO tb_account (nama_account, email_account, password_account, nohp) VALUES ('$name', '$email', '$password', '$nohp')";
 
 if ($conn->query($sql) === TRUE) {
     // Jika akun berhasil dibuat, set notifikasi untuk ditampilkan di halaman index-kost.php
